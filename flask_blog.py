@@ -30,29 +30,12 @@ class User(db.Model):
         user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
         author = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     def __repr__(self):
-        return f"Post('{self.title}', '{self.date_posted}')"
+        pass
     
-        
-        
-posts = [
-    {
-        "author": "Torzor Hub",
-        "title": "Blog post 1",
-        "content": "first post content",
-        "date_posted": "April 20, 2018"
-    },
-     {
-        "author": "jane Doe",
-        "title": "Blog post 2",
-        "content": "second post content",
-        "date_posted": "April 20, 2018"
-    }
-]
-
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', posts=posts)
+    return render_template('home.html')
 @app.route("/about")
 def about():
     return render_template('about.html', title="About")
@@ -80,4 +63,4 @@ def login():
     # with form=form we have access to the instance above
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5011)
+    app.run(debug=True, port=5013)
