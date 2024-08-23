@@ -1,4 +1,4 @@
-#!/home/torzor/Desktop/Learn/Python/flasky/gloFarmersMkt/farmenv/bin/python3
+#!/home/torzor/Desktop/Learn/Python/flasky/gloFarmersMkt/farmenv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
