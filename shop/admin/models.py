@@ -1,4 +1,4 @@
-from shop import db
+from shop import db, app
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -10,5 +10,7 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
-    
-    db.create_all()
+
+if __name__== "__manin__":
+    with app.app_context():
+        db.create_all()

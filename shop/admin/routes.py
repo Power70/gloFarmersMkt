@@ -19,5 +19,5 @@ def register():
                     password=hash_password)
         db.session.add(user) 
         flash('Thanks for registering')
-        return redirect(url_for('register'))
+        return redirect(url_for('home'))
     return render_template('admin/register.html', form=form, title="Farmers Registration page")
