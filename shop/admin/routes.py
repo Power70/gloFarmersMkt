@@ -26,4 +26,15 @@ def register():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm(request.form)
+    if request.method == 'POST' and form.validate():
+        user = User.query.filter_by(email = form.email.data).first()
+        # check the password that is store on our database
+        if user and bcrypt.check_password_hash(user.password, form.password.data):
+            # save the user in our session
+            session['email'] = form.email.data
+            flash(f'Welcome {form.email.data} you are logedin', 'success')
+            # redirect user to the admin page
+            return redirect(request.args.get('next') or url_for('admin'))
+    else:
+        flash('Wrong password please try again', 'danger')
     return render_template('admin/login.html', form=form, title="Login Page")
