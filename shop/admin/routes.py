@@ -1,7 +1,7 @@
 from flask import render_template, session, request, redirect, url_for, flash
 
 from shop import app, db, bcrypt
-from .forms import RegistrationForm
+from .forms import RegistrationForm, LoginForm
 from .models import User
 import os
 
