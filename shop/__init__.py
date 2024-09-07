@@ -18,3 +18,4 @@ migrate = Migrate(app, db)
 
 # Import routes after initializing app and db
 from shop.admin.routes import*
+from shop.farmsProducts.routes import*
