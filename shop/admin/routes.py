@@ -22,3 +22,8 @@ def register():
         flash(f'Welcome {form.name.data} Thanks for registering', 'success')
         return redirect(url_for('home'))
     return render_template('admin/register.html', form=form, title="Farmers Registration page")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm(request.form)
+    return render_template('admin/login.html', form=form, title="Login Page")
