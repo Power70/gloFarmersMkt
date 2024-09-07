@@ -34,7 +34,7 @@ def login():
             session['email'] = form.email.data
             flash(f'Welcome {form.email.data} you are logedin', 'success')
             # redirect user to the admin page
-            return redirect(request.args.get('next') or url_for('admin'))
+            return redirect(request.args.get('next') or url_for('home'))
     else:
         flash('Wrong password please try again', 'danger')
     return render_template('admin/login.html', form=form, title="Login Page")
