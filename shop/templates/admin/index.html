@@ -3,4 +3,111 @@
 
 {% include "_messages.html" %}
 
+<!-- Header with Logo and Navigation -->
+    <header class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                GlobalFarm
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white font-weight-bold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white font-weight-bold" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white font-weight-bold" href="#features">Features</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro Section -->
+    <section class="intro-section" style="background-image: url('{{ url_for('static', filename='images/farm.jpg') }}'); background-size: cover; background-position: center; min-height: 100vh;">
+        <div class="container text-center text-white d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
+            <h1 class="display-4">GlobalFarm Market Platform</h1>
+            <p class="lead">Connecting local farmers to the world</p>
+            <a href="/app" class="btn btn-primary mt-4">Explore the App</a>
+        </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Key Features</h2>
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                       
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Global Reach</h5>
+                            <p class="card-text">Allow local farmers to showcase their products globally and connect with international buyers.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                     
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Seamless Ordering</h5>
+                            <p class="card-text">Effortless ordering process with integration to logistics for smooth delivery.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow h-100">
+                        
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Verified Farmers</h5>
+                            <p class="card-text">All registered farmers undergo verification to ensure product quality and authenticity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">About the Project</h2>
+            <p>
+                The GlobalFarm Market Platform was born out of a pressing need to help local farmers in Nigeria and Africa reach a global audience.
+                Many of these farmers struggle with showcasing their products due to limited access to international markets. This project aims to bridge that gap by creating a user-friendly platform where local farmers can list their products and have them ordered by global customers.
+            </p>
+            <p>This platform is a Portfolio Project developed for ALX, showcasing a real-world solution that helps local economies grow by connecting them to global buyers.</p>
+            <p class="text-center">
+                <a href="https://github.com/Power70/gloFarmersMkt" class="btn btn-primary" target="_blank">GitHub Repository</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>Follow Us</p>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.linkedin.com/in/torzor-peter-2bb510236/" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/Power70" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="https://x.com/ITorzor" class="text-white mx-3" target="_blank">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+            <p class="mt-3">© 2024 GlobalFarm Market Platform</p>
+        </div>
+    </footer>
+
 {% endblock content %}
